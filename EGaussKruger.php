@@ -234,7 +234,7 @@ class EGaussKruger
 	public function geodetic_to_grid($latitude, $longitude) {
 		$x_y = array(null, null);
 		if ($this->central_meridian == null) {
-			return x_y;
+			return $x_y;
 		}
 		// Prepare ellipsoid-based stuff.
 		$e2 = $this->flattening * (2.0 - $this->flattening);
@@ -278,7 +278,7 @@ class EGaussKruger
 		$x_y[1] = round($y * 1000.0) / 1000.0;
 	//	x_y[0] = x;
 	//	x_y[1] = y;
-		return x_y;
+		return $x_y;
 	}
 
 	// Conversion from grid coordinates to geodetic coordinates.
